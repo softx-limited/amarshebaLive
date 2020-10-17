@@ -136,8 +136,8 @@
                             </div>
 
                             <div class="form-group">
-                                <label><strong>Vission :</strong></label>
-                                <textarea   class="ckeditor form-control" name="vission" require>{{ $item->vission}}</textarea>
+                                <label><strong>Vision :</strong></label>
+                                <textarea   class="ckeditor form-control" name="vision" require>{{ $item->vision}}</textarea>
                             </div>
 
                             <div class="form-group">

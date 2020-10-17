@@ -111,7 +111,7 @@
                                         <div class="card-image">
                                              
                                             
-                                            <a href="{{route('find.info','vission')}} ">  <h4 class="text-center">Vission</h4></a>
+                                            <a href="{{route('find.info','vision')}} ">  <h4 class="text-center">Vision</h4></a>
                                              
                                         </div>
                                    

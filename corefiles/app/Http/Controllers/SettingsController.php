@@ -42,7 +42,7 @@ class SettingsController extends Controller
       'about_us'=>'required',
       'contact_us'=>'required',
       'mission'=>'required',
-      'vission'=>'required',
+      'vision'=>'required',
       'history'=>'required',
     ]);
     $item =CommonConfig::latest()->first();
@@ -53,9 +53,9 @@ class SettingsController extends Controller
     $item->short_description=$request->short_description;
     $item->about_us=$request->about_us;
     $item->contact_us=$request->contact_us;
-    $item->mission=$request->contact_us;
-    $item->vission=$request->contact_us;
-    $item->history=$request->contact_us;
+    $item->mission=$request->mission;
+    $item->vision=$request->vision;
+    $item->history=$request->history;
     $item->save();
     
     Toastr::info('Site Settings has been Updated',"Updated");
