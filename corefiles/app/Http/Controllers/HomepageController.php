@@ -9,7 +9,8 @@ use App\Model\OurManPower;
 use App\Model\Client;
 use App\Model\Slider;
 use App\Model\CommonConfig;
-
+use App\Model\ContactUs;
+use Brian2694\Toastr\Facades\Toastr;
 class HomepageController extends Controller
 {
     public function index(){
@@ -62,5 +63,32 @@ return view('frontend.contactus',$datas);
         
 
         return view('frontend.common_view',compact('result','slug'));
+    }
+
+    public function sentRequest(Request $request){
+
+        $request->validate([
+
+            'name'=>'required',
+            'mobile'=>'required',
+            'email'=>'required',
+            'address'=>'required',
+            'message'=>'required'
+
+        ]);
+
+        $contactus=new ContactUs;      
+
+        $contactus->name=$request->name;
+        $contactus->mobile=$request->mobile;
+        $contactus->email=$request->email;
+        $contactus->address=$request->address;
+        $contactus->description=$request->message;
+        $contactus->save();
+        $request->session()->flash('success', 'Thank You for Your Request ! we will contact as soon as possible');
+ 
+        Toastr::success('Thank You for Your Request ! we will contact as soon as possible',"Success ");
+        return redirect()->back();
+
     }
 }

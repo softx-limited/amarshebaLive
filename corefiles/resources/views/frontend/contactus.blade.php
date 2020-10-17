@@ -57,34 +57,44 @@
                 <!-- contact right area-->
                 <div class="col-xl-7 col-lg-7">
                     <div class="contact-right">
+                        @if( session()->has('success'))
+       
+                        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                            <strong>{{session()->get('success') }}</strong> 
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          @endif
                         <!-- <div class="contact-right-title">
                             <h3>Call Back Service</h3>
                         </div> -->
-                        <form action="#" method="">
+                    <form action="{{route('sent.message')}}" method="POST">
+                        @csrf
                             <div class="row">
                                 <div class="col-xl-6 col-lg-6 col-md-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control form-control-lg" placeholder="Name*" name="name">
+                                        <input type="text" class="form-control form-control-lg" placeholder="Name*" name="name" required>
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6">
                                     <div class="form-group">
-                                        <input type="tel" class="form-control form-control-lg" placeholder="Phome*" name="phone">
+                                        <input type="tel" class="form-control form-control-lg" placeholder="Mobile*" name="mobile" required>
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6">
                                     <div class="form-group">
-                                        <input type="email" class="form-control form-control-lg" placeholder="Email*" name="email">
+                                        <input type="email" class="form-control form-control-lg" placeholder="Email*" name="email" required>
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control form-control-lg" placeholder="Address*" name="address">
+                                        <input type="text" class="form-control form-control-lg" placeholder="Address*" name="address" required>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
-                                       <textarea name="message" id="" cols="30" rows="" placeholder="Your Message"  class="form-control form-control-lg"></textarea>
+                                       <textarea name="message" id="" cols="30" rows="" placeholder="Your Message"  class="form-control form-control-lg" required></textarea>
                                     </div>
                                 </div>
                                 <div class="col-12">

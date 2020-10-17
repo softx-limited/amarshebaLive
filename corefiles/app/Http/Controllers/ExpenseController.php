@@ -7,7 +7,6 @@ use App\Model\ExpenseList;
 use App\Model\ExpenseCategory;
 use App\Model\Account;
 use App\Model\AccountHistory;
-
 use Brian2694\Toastr\Facades\Toastr;
 class ExpenseController extends Controller
 {

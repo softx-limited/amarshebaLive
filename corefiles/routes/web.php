@@ -28,6 +28,7 @@ Route::get('/contact-us','HomepageController@contactUs')->name('contact_us');
 
 
 Route::get('/company/{slug}','HomepageController@findinfo')->name('find.info'); 
+Route::post('/sent/message','HomepageController@sentRequest')->name('sent.message'); 
 
 /*nurse us Route start here*/
 Route::get('/nurse-service', function () {
