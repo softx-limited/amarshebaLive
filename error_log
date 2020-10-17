@@ -1,0 +1,8 @@
+[13-Oct-2020 22:57:07 America/New_York] PHP Warning:  require(/home/softecur/amarshebaltd.com.bd/public/../vendor/autoload.php): failed to open stream: No such file or directory in /home/softecur/amarshebaltd.com.bd/public/index.php on line 24
+[13-Oct-2020 22:57:07 America/New_York] PHP Fatal error:  require(): Failed opening required '/home/softecur/amarshebaltd.com.bd/public/../vendor/autoload.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/softecur/amarshebaltd.com.bd/public/index.php on line 24
+[15-Oct-2020 01:02:35 America/New_York] PHP Fatal error:  Uncaught RuntimeException: A facade root has not been set. in /home/softecur/amarshebaltd.com.bd/corefiles/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php:258
+Stack trace:
+#0 /home/softecur/amarshebaltd.com.bd/corefiles/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(425): Illuminate\Support\Facades\Facade::__callStatic('replaceNamespac...', Array)
+#1 /home/softecur/amarshebaltd.com.bd/corefiles/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(402): Illuminate\Foundation\Exceptions\Handler->registerErrorViewPaths()
+#2 /home/softecur/amarshebaltd.com.bd/corefiles/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(313): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#3 /home/softecur/amarshebaltd.com.bd/corefiles/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(210): Illuminate\Foundation\Exceptions\Handler->prepareResp in /home/softecur/amarshebaltd.com.bd/corefiles/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php on line 258
