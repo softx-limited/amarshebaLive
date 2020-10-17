@@ -27,7 +27,7 @@
                         <div class="sidebar">
                             <ul class="list-group">
                                 @foreach ($services as $item)
-                                <li class="list-group-item list-group-item-action"> <a href="{{ route('service.details',$item->slug) }}">{{ $item->service_title }}</a></li>
+                                <li class="list-group-item list-group-item-action"> <a href="{{ route('manpower.details',$item->slug) }}">{{ $item->service_title }}</a></li>
                         
                                 @endforeach
                             </ul>
