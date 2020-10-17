@@ -65,6 +65,92 @@
         <!-- =================================END SERVICES SECTION ============================================= -->
    
 
+
+
+          <!-- =================================START SERVICES SECTION =========================================== -->
+          <section class="services-section clearfix" id=" ">
+            <div class="container">
+                <!-- section title -->
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div class=" ">
+                            <h2> <span></span></h2>
+                            {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quam, autem, iusto mollitia beatae maxime ut illum sapiente excepturi veniam.</p> --}}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="single-service clearfix">
+                            <div class="card">
+                                <div class="card-body">
+                                     
+                                        <div class="card-image">
+                                             
+                                            
+                                                <a href=" "><h4 class="text-center">Mission</h4></a>
+                                             
+                                        </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="single-service clearfix">
+                            <div class="card">
+                                <div class="card-body">
+                                     
+                                        <div class="card-image">
+                                             
+                                            
+                                                <a href=" "><h4 class="text-center">Vission</h4></a>
+                                             
+                                        </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="single-service clearfix">
+                            <div class="card">
+                                <div class="card-body">
+                                     
+                                        <div class="card-image">
+                                             
+                                            
+                                                <a href=" "><h4 class="text-center">Company History</h4></a>
+                                             
+                                        </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                     
+
+
+                    
+                     
+                   
+                   
+                </div>
+            </div>
+        </section>
+        <!-- =================================END SERVICES SECTION ============================================= -->
+   
+
         <!-- ================================= START OUR TEAM SECTION ========================================== -->
         <section class="our-team-section section-padding clearfix">
             <div class="container">
