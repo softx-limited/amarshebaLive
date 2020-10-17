@@ -31,8 +31,8 @@ class HomepageController extends Controller
     }
 
     public function manpowerDetails($slug){
-        $data['service']=Service::where('slug',$slug)->first();
-        $data['services']=Service::latest()->get();
+        $data['service']=OurManPower::where('slug',$slug)->first();
+        $data['services']=OurManPower::latest()->get();
         return view('frontend.service_details',$data);
     }
     public function aboutUs(){
