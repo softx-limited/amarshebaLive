@@ -1,65 +1,33 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Model\Service;
-use App\Model\Team;
-use App\Model\OurManPower;
-use App\Model\Client;
-use App\Model\Slider;
-use App\Model\CommonConfig;
 
 
-Route::get('/', function () {
-    $datas=[];
-    $datas['services']=Service::latest()->take(6)->get();
-    $datas['sliders']=Slider::latest('id')->get();
-    $datas['teams']=Team::latest('id','ASC')->get();
-    $datas['manpowers']=OurManPower::latest()->take(6)->get();
-    $datas['clients']=Client::latest()->get();
-return view('frontend.index',$datas);
-})->name('homepage');
 
-/*Single Service  Route start here*/
-Route::get('/service/{slug}',function($slug){
 
-    $data['service']=Service::where('slug',$slug)->first();
-    $data['services']=Service::latest()->get();
-    return view('frontend.service_details',$data);
-})->name('service.details');
 
-/*Single Service  Route End here*/
 
-Route::get('/service/manpoqwr/{slug}',function($slug){
-
-})->name('manpower.details');
+Route::get('/','HomepageController@index')->name('homepage');
+Route::get('/service/{slug}','HomepageController@serviceDetails')->name('service.details');
+Route::get('/service/manpower/{slug}','HomepageController@manpowerDetails')->name('manpower.details');
 
 /*About us Route start here*/
-
-Route::get('/about-us', function () {
-    $datas=[];  
-    $datas['teams']=Team::latest('id','ASC')->get();
-    $datas['about_info']=CommonConfig::latest()->first();
-return view('frontend.aboutus',$datas);
-})->name('aboutus');
-
+ Route::get('/about-us','HomepageController@aboutUs')->name('aboutus');
 /*About us Route start here*/
+
 /*Service  us Route start here*/
-Route::get('/services', function () {
-    $datas=[];  
-    $datas['services']=Service::latest()->get();
-return view('frontend.service',$datas);
-})->name('service');
+Route::get('/services','HomepageController@service')->name('service'); 
 /*Service Route start here*/
-
-
-
 /*Contact us Route start here*/
-Route::get('/contact-us', function () {
-    $datas=[];  
-    $datas['about_info']=CommonConfig::latest()->first();
-return view('frontend.contactus',$datas);
-})->name('contact_us');
+ 
+Route::get('/contact-us','HomepageController@contactUs')->name('contact_us'); 
 /*Contact us Route End here*/
+
+
+/*Mission and Vission View*/
+
+
+Route::get('/company/{slug}','HomepageController@findinfo')->name('find.info'); 
 
 /*nurse us Route start here*/
 Route::get('/nurse-service', function () {

@@ -41,6 +41,7 @@
                         <div class="single-service clearfix">
                             <div class="card">
                                 <div class="card-body">
+                                    <a href="{{ route('service.details',$item->slug) }}">
                                     <h4 class="text-center">{{ $item->service_title }}</h4>
                                         <div class="card-image">
                                             <img class="w-100" src="{{asset('service/'.$item->service_front_image)}}" alt="">
@@ -49,6 +50,7 @@
                                             </div>
                                         </div>
                                     <p class="text-center">{{ substr($item->service_details,0,200) }}</p>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -90,7 +92,7 @@
                                         <div class="card-image">
                                              
                                             
-                                                <a href=" "><h4 class="text-center">Mission</h4></a>
+                                                <a href="{{route('find.info','mission')}}"> <h4 class="text-center">Mission</h4></a>
                                              
                                         </div>
                                    
@@ -109,7 +111,7 @@
                                         <div class="card-image">
                                              
                                             
-                                                <a href=" "><h4 class="text-center">Vission</h4></a>
+                                            <a href="{{route('find.info','vission')}} ">  <h4 class="text-center">Vission</h4></a>
                                              
                                         </div>
                                    
@@ -127,7 +129,7 @@
                                         <div class="card-image">
                                              
                                             
-                                                <a href=" "><h4 class="text-center">Company History</h4></a>
+                                            <a href="{{route('find.info','history')}} "><h4 class="text-center">Company History</h4></a>
                                              
                                         </div>
                                    

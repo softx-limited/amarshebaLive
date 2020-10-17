@@ -125,10 +125,29 @@
                                             <textarea   class="ckeditor form-control" name="about_us" require>{{ $item->about_us}}</textarea>
                                     </div>
 
-                                    <div class="form-group">
+                                <div class="form-group">
                                         <label><strong>Contact us :</strong></label>
                                         <textarea   class="ckeditor form-control" name="contact_us" require>{{ $item->contact_us}}</textarea>
                                 </div>
+
+                            <div class="form-group">
+                                    <label><strong>Mission :</strong></label>
+                                    <textarea   class="ckeditor form-control" name="mission" require>{{ $item->mission}}</textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label><strong>Vission :</strong></label>
+                                <textarea   class="ckeditor form-control" name="vission" require>{{ $item->vission}}</textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label><strong>History :</strong></label>
+                                <textarea   class="ckeditor form-control" name="history" require>{{ $item->history}}</textarea>
+                            </div>
+
+
+
+
 
                                 <div class="form-group pull-right">
                                     <button type="submit" class="btn btn-primary ">Update </button>
